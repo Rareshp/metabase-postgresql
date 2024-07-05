@@ -102,3 +102,21 @@ Use this command to find that IP:
 ```sh
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgres
 ```
+
+### Dashboard
+![alt](./images/0_dashboard_overview.png)
+
+Sorted bar charts are easily implementable:
+![alt](./images/1_dashboard_pareto.png)
+
+We may decide not to summarize data, but simply plot it in time:
+![alt](./images/3_dashboard_lines.png)
+
+As the data has states defined, maps are possile:
+![alt](./images/4_dashboard_maps.png)
+
+I also added several filter options. For example, we can drill into the "Tables" sales to see they are loosing money.
+![alt](./images/5_filter_by_tables.png)
+
+Then find the exact order ids when this is happening.
+![alt](./images/6_finding_orders_id_for_losses.png)
